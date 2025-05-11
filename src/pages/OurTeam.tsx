@@ -10,14 +10,15 @@ const OurTeam = () => {
   const { toast } = useToast();
   const [currentTab, setCurrentTab] = useState("organisers");
 
-  // Team data with actual members
+  // Team data with actual members and updated fun facts
   const [teamData, setTeamData] = useState({
     organisers: [
       {
         name: "Arya Ananda Putra",
         image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=300&h=300&fit=crop",
         role: "Lead Organiser",
-        funFact: "Can solve a Rubik's cube in under 30 seconds"
+        funFact: "Can solve a Rubik's cube in under 30 seconds",
+        imagePosition: "center top"
       },
       {
         name: "Ryan Shaw",
@@ -27,9 +28,10 @@ const OurTeam = () => {
       },
       {
         name: "Francis Ang Zhao Xiong",
-        image: "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?w=300&h=300&fit=crop",
+        image: "/lovable-uploads/d23eeba1-d1c8-4d90-a5ba-ec7525283470.png",
         role: "Organiser",
-        funFact: "Plays three musical instruments"
+        funFact: "I figure out most of my solutions when I'm on the toiletbowl :3",
+        imagePosition: "center top"
       },
       {
         name: "Edward Yee Mynn Sherng",
@@ -39,9 +41,10 @@ const OurTeam = () => {
       },
       {
         name: "Pannawit Supanwassa",
-        image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=300&h=300&fit=crop",
+        image: "/lovable-uploads/5a40b946-98a1-495a-91ca-e0d0338143f6.png",
         role: "Organiser",
-        funFact: "Makes his own hot sauce"
+        funFact: "A CP-enthusiastic monkey who founded CPIC but like to yap about quantum physics",
+        imagePosition: "center top"
       },
       {
         name: "Seah E-Ket",
@@ -72,28 +75,70 @@ const OurTeam = () => {
         funFact: "Once debugged code for 36 hours straight"
       },
       {
-        name: "Yu Zhe Yuan",
-        image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=300&fit=crop",
+        name: "Yu Zheyuan",
         role: "Trainer",
-        funFact: "Knows five programming languages"
-      },
-      {
-        name: "Tung Jia Ray",
-        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop",
-        role: "Trainer",
-        funFact: "Started coding at age 8"
+        funFact: "skibidi toilet"
       },
       {
         name: "Nguyen Dinh Anh",
-        image: "https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?w=300&h=300&fit=crop",
+        image: "/lovable-uploads/e744596c-1de3-4ec3-9bc3-61bf1eee5b7a.png", // Gao Zhaoyi's image
         role: "Trainer",
-        funFact: "Has a perfect memory for algorithms"
+        funFact: "I finger my guitar 👍",
+        imagePosition: "center top"
+      },
+      {
+        name: "Han Phyo Oo",
+        image: "/lovable-uploads/1036e146-67cb-4e35-b2e6-7ead3b15097e.png", // Francis' image
+        role: "Trainer",
+        funFact: "I like valorant.",
+        imagePosition: "center top"
+      },
+      {
+        name: "Michael Hanson Sugiharto",
+        image: "/lovable-uploads/27272ab1-60c0-4feb-b997-770efc9a4a48.png", // Derrick's image
+        role: "Trainer",
+        funFact: "I love spicy food.",
+        imagePosition: "center top"
+      },
+      {
+        name: "Gao Zhaoyi",
+        role: "Trainer",
+        funFact: "Eket cant be this cute."
+      },
+      {
+        name: "Andreas Surya Tanjung",
+        image: "/lovable-uploads/e813a8fb-4d12-41ab-85bd-27e819480919.png", // Han Phyo Oo's image
+        role: "Trainer",
+        funFact: "I love to explore different aspects of the world",
+        imagePosition: "center top"
+      },
+      {
+        name: "Derrick Lukimin",
+        image: "/lovable-uploads/3069c6af-4890-4762-b797-21baa33b9733.png", // Nguyen Dinh Anh's image
+        role: "Trainer",
+        funFact: "My IOI selection rank was higher than my NOI rank this year which makes absolutely no sense",
+        imagePosition: "center top"
+      },
+      {
+        name: "William Edward Sugiharto",
+        image: "/lovable-uploads/ea71a862-7717-42c6-bb32-f65af853b39c.png", // Michael Hanson's image
+        role: "Trainer",
+        funFact: "I have a pet otter:)",
+        imagePosition: "center 30%"
+      },
+      {
+        name: "Ryker Xu",
+        image: "/lovable-uploads/bf018ac0-01b7-4bec-9b01-100cc6919929.png", // Yu Zheyuan's image
+        role: "Trainer",
+        funFact: "quack",
+        imagePosition: "center 40%"
       },
       {
         name: "Ziv Lim Zhengheng",
-        image: "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?w=300&h=300&fit=crop",
+        image: "/lovable-uploads/78ace439-20dc-4ad9-b1fa-778036331a9b.png", // Tung Jia Ray's image
         role: "Trainer",
-        funFact: "Can type 120 words per minute"
+        funFact: "When I asked my mom this question to get some ideas, she used this opportunity to bash me",
+        imagePosition: "center 30%"
       },
     ],
   });
@@ -140,6 +185,7 @@ const OurTeam = () => {
                     image={member.image}
                     role={member.role}
                     funFact={member.funFact}
+                    imagePosition={member.imagePosition}
                   />
                 ))}
               </div>
